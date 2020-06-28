@@ -100,6 +100,12 @@ const engineerQuestions = [
 		},
 	},
 	// asks for engineer's Github username
+	{
+		type: "input",
+		name: "github",
+		message: "What is your team members GitHub username?",
+		validate: validation,
+	},
 ];
 
 // Write code to use inquirer to gather information about the development team members,
