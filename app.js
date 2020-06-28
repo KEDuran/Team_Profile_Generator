@@ -107,16 +107,16 @@ const engineerQuestions = [
 		validate: validation,
 	},
 ];
-// questions for engineer role
-const engineerQuestions = [
-	// asks for engineer's name
+// questions for inter role
+const internQuestions = [
+	// asks for intern's name
 	{
 		type: "input",
 		name: "name",
 		message: "What is your team members full name?",
 		validate: validation,
 	},
-	// asks for engineer's id
+	// asks for intern's id
 	{
 		type: "number",
 		name: "id",
@@ -127,7 +127,7 @@ const engineerQuestions = [
 			}
 		},
 	},
-	// asks for engineer's email
+	// asks for intern's email
 	{
 		type: "input",
 		name: "email",
@@ -140,11 +140,11 @@ const engineerQuestions = [
 			}
 		},
 	},
-	// asks for engineer's Github username
+	// asks for intern's school
 	{
 		type: "input",
-		name: "github",
-		message: "What is your team members GitHub username?",
+		name: "school",
+		message: "What is the name of the school the intern attends?",
 		validate: validation,
 	},
 ];
