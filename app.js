@@ -25,7 +25,7 @@ const managerQuestions = [
 	{
 		type: "input",
 		name: "name",
-		message: "What is the manager's full name?",
+		message: "Please enter manager's full name to begin creating team webpage?",
 		validate: validation,
 	},
 
@@ -49,15 +49,14 @@ const managerQuestions = [
 				return "Not a valid email. Please enter valid email.";
 			}
 		},
-    },
-    // asks for manager's office number
-    {
-        type: "input",
+	},
+	// asks for manager's office number
+	{
+		type: "input",
 		name: "officeNumber",
 		message: "What is the manager's office number?",
 		validate: validation,
 	},
-    
 ];
 
 // Write code to use inquirer to gather information about the development team members,
