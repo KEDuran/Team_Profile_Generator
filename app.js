@@ -107,7 +107,7 @@ const engineerQuestions = [
 		validate: validation,
 	},
 ];
-// questions for inter role
+// questions for intern role
 const internQuestions = [
 	// asks for intern's name
 	{
@@ -145,6 +145,27 @@ const internQuestions = [
 		type: "input",
 		name: "school",
 		message: "What is the name of the school the intern attends?",
+		validate: validation,
+	},
+];
+// question for adding another team member
+const addMoreTeamMembers = [
+	// asks if user needs to add another team member (Y/N)
+	{
+		type: "confirm",
+		name: "newTeamMembers",
+		message: "Do you want to add another another team member?",
+		validate: validation,
+	},
+];
+// question for role of new team member
+const teamMemberRole = [
+	// asks for the team member's role (not prompting for manager since there should only be one manager)
+	{
+		type: "list",
+		name: "role",
+		message: "What is the role of the team member you would like to add?",
+		choices: ["Engineer", "Intern"],
 		validate: validation,
 	},
 ];
