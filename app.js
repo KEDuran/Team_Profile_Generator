@@ -148,7 +148,7 @@ const internQuestions = [
 		validate: validation,
 	},
 ];
-// questions for adding another team member
+// question for adding another team member
 const addMoreTeamMembers = [
 	// asks if user needs to add another team member (Y/N)
 	{
@@ -157,6 +157,9 @@ const addMoreTeamMembers = [
 		message: "Do you want to add another another team member?",
 		validate: validation,
 	},
+];
+// question for role of new team member
+const teamMemberRole = [
 	// asks for the team member's role (not prompting for manager since there should only be one manager)
 	{
 		type: "list",
