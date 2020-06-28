@@ -171,7 +171,13 @@ const teamMemberRole = [
 ];
 
 // start inquirer prompt for manager questions
-inquirer.prompt(managerQuestions).then(() => {
+inquirer.prompt(managerQuestions).then((managerAnswers) => {
+	let newManager = new Manager(
+		managerAnswers.name,
+		managerAnswers.id,
+		managerAnswers.email,
+		managerAnswers.officeNumber
+	);
 	// starts inquirer prompt for adding new team members
 	inquirer.prompt(addMoreTeamMembers).then(() => {
 		// prompts for role of new team member
