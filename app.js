@@ -245,5 +245,3 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
 	// invoking add() function to prompt for additional of team members
 	add();
 });
-
-

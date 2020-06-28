@@ -1,0 +1,18 @@
+/* jumbrotron background color */
+.color1 {
+	background: rgb(119, 76, 96);
+}
+/* card header background color */
+.color2 {
+	background: rgb(247, 209, 205);
+}
+/* card body background color */
+.color3 {
+	background: rgb(250, 237, 203);
+}
+/* media query to make cards responsive with screensize 768px and smaller */
+@media (max-width: 768px) {
+	.team-area {
+		flex-direction: column;
+	}
+}
