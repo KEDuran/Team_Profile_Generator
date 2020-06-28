@@ -149,8 +149,16 @@ const internQuestions = [
 	},
 ];
 // questions for adding another team member
-const addMoreTeamMembers = [];
-// asks if user needs to add another team member (Y/N)
+const addMoreTeamMembers = [
+    // asks if user needs to add another team member (Y/N)
+	{
+		type: "confirm",
+		name: "newTeamMembers",
+		message: "Do you want to add another another team member?",
+		validate: validation,
+	},
+];
+
 // asks for the team member's role
 
 // Write code to use inquirer to gather information about the development team members,
