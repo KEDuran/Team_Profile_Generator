@@ -31,12 +31,14 @@ const managerQuestions = [
 
 	// asks for manager's id
 	{
-		type: "number",
+		type: "input",
 		name: "id",
 		message: "What is the manager's ID number?",
 		validate: function (value) {
-			if (value <= 0) {
+			if (!/^[0-9]+$/.test(value)) {
 				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -60,8 +62,10 @@ const managerQuestions = [
 		name: "officeNumber",
 		message: "What is the manager's office number?",
 		validate: function (value) {
-			if (value <= 0) {
-				return "Office number must be a numerical value greater than zero.";
+			if (!/^[0-9]+$/.test(value)) {
+				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -81,8 +85,10 @@ const engineerQuestions = [
 		name: "id",
 		message: "What is the engineer's ID number?",
 		validate: function (value) {
-			if (value <= 0) {
+			if (!/^[0-9]+$/.test(value)) {
 				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -122,8 +128,10 @@ const internQuestions = [
 		name: "id",
 		message: "What is the intern's ID number?",
 		validate: function (value) {
-			if (value <= 0) {
+			if (!/^[0-9]+$/.test(value)) {
 				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
