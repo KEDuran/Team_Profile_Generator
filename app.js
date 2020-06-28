@@ -10,8 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-/*Function used to validate entry for all questions (except email question).
-Email question has separate validation.*/
+// Function used to validate general entry questions. Not applicable to email.
 function validation(value) {
 	if (value != "") {
 		return true;
@@ -22,11 +21,25 @@ function validation(value) {
 
 // questions for manager role
 const managerQuestions = [
+	// asks for manager's name
 	{
 		type: "input",
 		name: "name",
 		message: "What is the manager's full name?",
 		validate: validation,
+	},
+	// asks for manager's email
+	{
+		type: "input",
+		name: "email",
+		message: "What is the manager's email?",
+		validate: function (value) {
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+				return true;
+			} else {
+				return "Not a valid email. Please enter valid email.";
+			}
+		},
 	},
 ];
 
