@@ -107,7 +107,7 @@ const engineerQuestions = [
 		validate: validation,
 	},
 ];
-// questions for inter role
+// questions for intern role
 const internQuestions = [
 	// asks for intern's name
 	{
@@ -148,6 +148,9 @@ const internQuestions = [
 		validate: validation,
 	},
 ];
+// questions for adding another team member
+// asks if user needs to add another team member (Y/N)
+// asks for the team member's role
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
