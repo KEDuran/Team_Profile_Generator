@@ -72,14 +72,14 @@ const engineerQuestions = [
 	{
 		type: "input",
 		name: "name",
-		message: "What is your team members full name?",
+		message: "What is the engineer's full name?",
 		validate: validation,
 	},
 	// asks for engineer's id
 	{
 		type: "number",
 		name: "id",
-		message: "What is the team members's ID?",
+		message: "What is the engineer's ID number?",
 		validate: function (value) {
 			if (value <= 0) {
 				return "ID must be a numerical value greater than zero.";
@@ -90,7 +90,7 @@ const engineerQuestions = [
 	{
 		type: "input",
 		name: "email",
-		message: "What is the team member's email?",
+		message: "What is the engineer's email?",
 		validate: function (value) {
 			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
 				return true;
@@ -103,7 +103,7 @@ const engineerQuestions = [
 	{
 		type: "input",
 		name: "github",
-		message: "What is your team members GitHub username?",
+		message: "What is the engineer's GitHub username?",
 		validate: validation,
 	},
 ];
