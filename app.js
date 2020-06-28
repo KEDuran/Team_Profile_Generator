@@ -19,7 +19,7 @@ function validation(value) {
 	}
 }
 
-// questions for manager role
+// questions for manager role (no role specific questions needed here)
 const managerQuestions = [
 	// asks for manager's name
 	{
@@ -28,6 +28,15 @@ const managerQuestions = [
 		message: "What is the manager's full name?",
 		validate: validation,
 	},
+
+	// asks for manager's id
+	{
+		type: "input",
+		name: "id",
+		message: "What is the manager's ID?",
+		validate: validation,
+	},
+
 	// asks for manager's email
 	{
 		type: "input",
