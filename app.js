@@ -10,7 +10,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
-// Function used to validate general entry questions. Not applicable to email.
+// Function used to validate general entry questions. Not applicable to email or numbers.
 function validation(value) {
 	if (value != "") {
 		return true;
@@ -31,10 +31,14 @@ const managerQuestions = [
 
 	// asks for manager's id
 	{
-		type: "input",
+		type: "number",
 		name: "id",
 		message: "What is the manager's ID?",
-		validate: validation,
+		validate: function (value) {
+			if (value <= 0) {
+				return "ID must be a numerical value greater than zero.";
+			}
+		},
 	},
 
 	// asks for manager's email
@@ -55,7 +59,11 @@ const managerQuestions = [
 		type: "input",
 		name: "officeNumber",
 		message: "What is the manager's office number?",
-		validate: validation,
+		validate: function (value) {
+			if (value <= 0) {
+				return "Office number must be a numerical value greater than zero.";
+			}
+		},
 	},
 ];
 
