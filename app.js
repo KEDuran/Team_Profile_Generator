@@ -113,14 +113,14 @@ const internQuestions = [
 	{
 		type: "input",
 		name: "name",
-		message: "What is your team members full name?",
+		message: "What is the intern's full name?",
 		validate: validation,
 	},
 	// asks for intern's id
 	{
 		type: "number",
 		name: "id",
-		message: "What is the team members's ID?",
+		message: "What is the intern's ID number?",
 		validate: function (value) {
 			if (value <= 0) {
 				return "ID must be a numerical value greater than zero.";
@@ -131,7 +131,7 @@ const internQuestions = [
 	{
 		type: "input",
 		name: "email",
-		message: "What is the team member's email?",
+		message: "What is the intern's email?",
 		validate: function (value) {
 			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
 				return true;
