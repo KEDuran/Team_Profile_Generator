@@ -177,6 +177,8 @@ const teamMemberRole = [
 		validate: validation,
 	},
 ];
+// global variable to store employee data
+var employeeData = [];
 // function to trigger logic to add more team members
 function add() {
 	// starts inquirer prompt for adding new team members
