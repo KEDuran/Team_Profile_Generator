@@ -172,6 +172,7 @@ const teamMemberRole = [
 
 // start inquirer prompt for manager questions
 inquirer.prompt(managerQuestions).then((managerAnswers) => {
+	// using Manager construtor class to create new manager entry based on answers to questions
 	let newManager = new Manager(
 		managerAnswers.name,
 		managerAnswers.id,
@@ -179,9 +180,35 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
 		managerAnswers.officeNumber
 	);
 	// starts inquirer prompt for adding new team members
-	inquirer.prompt(addMoreTeamMembers).then(() => {
-		// prompts for role of new team member
-		inquirer.prompt(teamMemberRole).then(() => {});
+	inquirer.prompt(addMoreTeamMembers).then((answer) => {
+		if (answer.newTeamMembers) {
+			// prompts for role of new team member
+			inquirer.prompt(teamMemberRole).then((roleSelection) => {
+				// prompts for the engineer role
+				if (roleSelection.role === "Engineer") {
+					inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
+						// using Engineer construtor class to create new engineer entry based on answers to questions
+						let newEngineer = new Engineer(
+							engineerAnswers.name,
+							engineerAnswers.id,
+							engineerAnswers.email,
+							engineerAnswers.github
+						);
+					});
+				} else {
+					// prompts for the intern role
+					inquirer.prompt(internQuestions).then((internAnswers) => {
+						// using intern construtor class to create new intern entry based on answers to questions
+						let newIntern = new Intern(
+							internAnswers.name,
+							internAnswers.id,
+							internAnswers.email,
+							internAnswers.school
+						);
+					});
+				}
+			});
+		}
 	});
 });
 
