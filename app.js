@@ -169,16 +169,8 @@ const teamMemberRole = [
 		validate: validation,
 	},
 ];
-
-// start inquirer prompt for manager questions
-inquirer.prompt(managerQuestions).then((managerAnswers) => {
-	// using Manager construtor class to create new manager entry based on answers to questions
-	let newManager = new Manager(
-		managerAnswers.name,
-		managerAnswers.id,
-		managerAnswers.email,
-		managerAnswers.officeNumber
-	);
+// function to trigger logic to add more team members
+function add() {
 	// starts inquirer prompt for adding new team members
 	inquirer.prompt(addMoreTeamMembers).then((answer) => {
 		if (answer.newTeamMembers) {
@@ -210,6 +202,17 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
 			});
 		}
 	});
+}
+
+// start inquirer prompt for manager questions
+inquirer.prompt(managerQuestions).then((managerAnswers) => {
+	// using Manager construtor class to create new manager entry based on answers to questions
+	let newManager = new Manager(
+		managerAnswers.name,
+		managerAnswers.id,
+		managerAnswers.email,
+		managerAnswers.officeNumber
+	);
 });
 
 // Write code to use inquirer to gather information about the development team members,
