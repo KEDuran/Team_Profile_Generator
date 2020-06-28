@@ -196,6 +196,8 @@ function add() {
 							engineerAnswers.email,
 							engineerAnswers.github
 						);
+						// appending engineer data into the employeeData array
+						employeeData.push(newEngineer);
 						// invoking add() function here to create a recursive (objects calling themselves) loop
 						add();
 					});
