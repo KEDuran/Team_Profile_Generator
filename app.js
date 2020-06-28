@@ -76,6 +76,16 @@ const engineerQuestions = [
 		validate: validation,
 	},
 	// asks for engineer's id
+	{
+		type: "number",
+		name: "id",
+		message: "What is the team members's ID?",
+		validate: function (value) {
+			if (value <= 0) {
+				return "ID must be a numerical value greater than zero.";
+			}
+		},
+	},
 	// asks for engineer's email
 	// asks for engineer's Github username
 ];
