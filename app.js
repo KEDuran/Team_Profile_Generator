@@ -69,6 +69,12 @@ const managerQuestions = [
 // questions for engineer role
 const engineerQuestions = [
 	// asks for engineer's name
+	{
+		type: "input",
+		name: "name",
+		message: "What is your team members full name?",
+		validate: validation,
+	},
 	// asks for engineer's id
 	// asks for engineer's email
 	// asks for engineer's Github username
