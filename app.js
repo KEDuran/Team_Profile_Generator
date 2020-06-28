@@ -218,6 +218,15 @@ function add() {
 					});
 				}
 			});
+		} else {
+			// invoking render() function and pushing through employee data as a parameter
+			let htmlOuptut = render(employeeData);
+			// make fs.writeFile call to render an html output
+			fs.writeFile(outputPath, htmlOuptut, function (err) {
+				if (err) {
+					return console.log(err);
+				}
+			});
 		}
 	});
 }
