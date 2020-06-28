@@ -10,6 +10,62 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+// Function used to validate general entry questions. Not applicable to email or numbers.
+function validation(value) {
+	if (value != "") {
+		return true;
+	} else {
+		return "Please answer the question.";
+	}
+}
+
+// questions for manager role (no role specific questions needed here)
+const managerQuestions = [
+	// asks for manager's name
+	{
+		type: "input",
+		name: "name",
+		message: "Please enter manager's full name to begin creating team webpage?",
+		validate: validation,
+	},
+
+	// asks for manager's id
+	{
+		type: "number",
+		name: "id",
+		message: "What is the manager's ID?",
+		validate: function (value) {
+			if (value <= 0) {
+				return "ID must be a numerical value greater than zero.";
+			}
+		},
+	},
+
+	// asks for manager's email
+	{
+		type: "input",
+		name: "email",
+		message: "What is the manager's email?",
+		validate: function (value) {
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+				return true;
+			} else {
+				return "Not a valid email. Please enter valid email.";
+			}
+		},
+	},
+	// asks for manager's office number
+	{
+		type: "input",
+		name: "officeNumber",
+		message: "What is the manager's office number?",
+		validate: function (value) {
+			if (value <= 0) {
+				return "Office number must be a numerical value greater than zero.";
+			}
+		},
+	},
+];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
