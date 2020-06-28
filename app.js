@@ -163,6 +163,7 @@ const addMoreTeamMembers = [
 		name: "role",
 		message: "What is the role of the team member you would like to add?",
 		choices: ["engineer", "intern"],
+		validate: validation,
 	},
 ];
 
