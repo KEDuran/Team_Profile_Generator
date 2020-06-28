@@ -199,6 +199,8 @@ function add() {
 						);
 					});
 				}
+				// invoking add() function here to create a recursive (objects calling themselves) loop
+				add();
 			});
 		}
 	});
@@ -213,6 +215,8 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
 		managerAnswers.email,
 		managerAnswers.officeNumber
 	);
+	// invoking add() function to prompt for additional of team members
+	add();
 });
 
 // Write code to use inquirer to gather information about the development team members,
