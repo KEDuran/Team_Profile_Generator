@@ -170,6 +170,15 @@ const teamMemberRole = [
 	},
 ];
 
+// start inquirer prompt for manager questions
+inquirer.prompt(managerQuestions).then(() => {
+	// starts inquirer prompt for adding new team members
+	inquirer.prompt(addMoreTeamMembers).then(() => {
+		// prompts for role of new team member
+		inquirer.prompt(teamMemberRole).then(() => {});
+	});
+});
+
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
