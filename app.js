@@ -10,6 +10,25 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+/*Function used to validate entry for all questions (except email question).
+Email question has separate validation.*/
+function validation(value) {
+	if (value != "") {
+		return true;
+	} else {
+		return "Please answer the question.";
+	}
+}
+
+// questions for manager role
+const managerQuestions = [
+	{
+		type: "input",
+		name: "name",
+		message: "What is the manager's full name?",
+		validate: validation,
+	},
+];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
