@@ -211,6 +211,8 @@ function add() {
 							internAnswers.email,
 							internAnswers.school
 						);
+						// appending intern data into the employeeData array
+						employeeData.push(newIntern);
 						// invoking add() function here to create a recursive (objects calling themselves) loop
 						add();
 					});
