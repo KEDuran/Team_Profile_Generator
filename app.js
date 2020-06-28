@@ -33,7 +33,7 @@ const managerQuestions = [
 	{
 		type: "number",
 		name: "id",
-		message: "What is the manager's ID?",
+		message: "What is the manager's ID number?",
 		validate: function (value) {
 			if (value <= 0) {
 				return "ID must be a numerical value greater than zero.";
