@@ -165,7 +165,7 @@ const teamMemberRole = [
 		type: "list",
 		name: "role",
 		message: "What is the role of the team member you would like to add?",
-		choices: ["engineer", "intern"],
+		choices: ["Engineer", "Intern"],
 		validate: validation,
 	},
 ];
