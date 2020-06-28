@@ -67,7 +67,12 @@ const managerQuestions = [
 	},
 ];
 // questions for engineer role
-const engineerQuestions = [];
+const engineerQuestions = [
+	// asks for engineer's name
+	// asks for engineer's id
+	// asks for engineer's email
+	// asks for engineer's Github username
+];
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
