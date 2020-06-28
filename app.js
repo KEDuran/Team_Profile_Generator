@@ -155,7 +155,7 @@ const addMoreTeamMembers = [
 		type: "confirm",
 		name: "newTeamMembers",
 		message: "Do you want to add another another team member?",
-		validate: validation,
+		default: false,
 	},
 ];
 // question for role of new team member
