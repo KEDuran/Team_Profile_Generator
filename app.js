@@ -227,6 +227,8 @@ inquirer.prompt(managerQuestions).then((managerAnswers) => {
 		managerAnswers.email,
 		managerAnswers.officeNumber
 	);
+	// appending manager data into the employeeData array
+	employeeData.push(newManager);
 	// invoking add() function to prompt for additional of team members
 	add();
 });
