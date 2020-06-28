@@ -31,12 +31,14 @@ const managerQuestions = [
 
 	// asks for manager's id
 	{
-		type: "number",
+		type: "input",
 		name: "id",
 		message: "What is the manager's ID number?",
 		validate: function (value) {
-			if (value <= 0) {
+			if (!/^[0-9]+$/.test(value)) {
 				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -60,8 +62,10 @@ const managerQuestions = [
 		name: "officeNumber",
 		message: "What is the manager's office number?",
 		validate: function (value) {
-			if (value <= 0) {
-				return "Office number must be a numerical value greater than zero.";
+			if (!/^[0-9]+$/.test(value)) {
+				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -77,12 +81,14 @@ const engineerQuestions = [
 	},
 	// asks for engineer's id
 	{
-		type: "number",
+		type: "input",
 		name: "id",
 		message: "What is the engineer's ID number?",
 		validate: function (value) {
-			if (value <= 0) {
+			if (!/^[0-9]+$/.test(value)) {
 				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -118,12 +124,14 @@ const internQuestions = [
 	},
 	// asks for intern's id
 	{
-		type: "number",
+		type: "input",
 		name: "id",
 		message: "What is the intern's ID number?",
 		validate: function (value) {
-			if (value <= 0) {
+			if (!/^[0-9]+$/.test(value)) {
 				return "ID must be a numerical value greater than zero.";
+			} else {
+				return true;
 			}
 		},
 	},
@@ -155,7 +163,7 @@ const addMoreTeamMembers = [
 		type: "confirm",
 		name: "newTeamMembers",
 		message: "Do you want to add another another team member?",
-		validate: validation,
+		default: false,
 	},
 ];
 // question for role of new team member
@@ -169,6 +177,57 @@ const teamMemberRole = [
 		validate: validation,
 	},
 ];
+// function to trigger logic to add more team members
+function add() {
+	// starts inquirer prompt for adding new team members
+	inquirer.prompt(addMoreTeamMembers).then((answer) => {
+		if (answer.newTeamMembers) {
+			// prompts for role of new team member
+			inquirer.prompt(teamMemberRole).then((roleSelection) => {
+				// prompts for the engineer role
+				if (roleSelection.role === "Engineer") {
+					inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
+						// using Engineer construtor class to create new engineer entry based on answers to questions
+						let newEngineer = new Engineer(
+							engineerAnswers.name,
+							engineerAnswers.id,
+							engineerAnswers.email,
+							engineerAnswers.github
+						);
+						// invoking add() function here to create a recursive (objects calling themselves) loop
+						add();
+					});
+				} else {
+					// prompts for the intern role
+					inquirer.prompt(internQuestions).then((internAnswers) => {
+						// using intern construtor class to create new intern entry based on answers to questions
+						let newIntern = new Intern(
+							internAnswers.name,
+							internAnswers.id,
+							internAnswers.email,
+							internAnswers.school
+						);
+						// invoking add() function here to create a recursive (objects calling themselves) loop
+						add();
+					});
+				}
+			});
+		}
+	});
+}
+
+// start inquirer prompt for manager questions
+inquirer.prompt(managerQuestions).then((managerAnswers) => {
+	// using Manager construtor class to create new manager entry based on answers to questions
+	let newManager = new Manager(
+		managerAnswers.name,
+		managerAnswers.id,
+		managerAnswers.email,
+		managerAnswers.officeNumber
+	);
+	// invoking add() function to prompt for additional of team members
+	add();
+});
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
