@@ -150,16 +150,21 @@ const internQuestions = [
 ];
 // questions for adding another team member
 const addMoreTeamMembers = [
-    // asks if user needs to add another team member (Y/N)
+	// asks if user needs to add another team member (Y/N)
 	{
 		type: "confirm",
 		name: "newTeamMembers",
 		message: "Do you want to add another another team member?",
 		validate: validation,
 	},
+	// asks for the team member's role (not prompting for manager since there should only be one manager)
+	{
+		type: "list",
+		name: "role",
+		message: "What is the role of the team member you would like to add?",
+		choices: ["engineer", "intern"],
+	},
 ];
-
-// asks for the team member's role
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
