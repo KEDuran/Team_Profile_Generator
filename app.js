@@ -81,7 +81,7 @@ const engineerQuestions = [
 	},
 	// asks for engineer's id
 	{
-		type: "number",
+		type: "input",
 		name: "id",
 		message: "What is the engineer's ID number?",
 		validate: function (value) {
@@ -124,7 +124,7 @@ const internQuestions = [
 	},
 	// asks for intern's id
 	{
-		type: "number",
+		type: "input",
 		name: "id",
 		message: "What is the intern's ID number?",
 		validate: function (value) {
