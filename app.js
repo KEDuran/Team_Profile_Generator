@@ -194,6 +194,8 @@ function add() {
 							engineerAnswers.email,
 							engineerAnswers.github
 						);
+						// invoking add() function here to create a recursive (objects calling themselves) loop
+						add();
 					});
 				} else {
 					// prompts for the intern role
@@ -205,10 +207,10 @@ function add() {
 							internAnswers.email,
 							internAnswers.school
 						);
+						// invoking add() function here to create a recursive (objects calling themselves) loop
+						add();
 					});
 				}
-				// invoking add() function here to create a recursive (objects calling themselves) loop
-				add();
 			});
 		}
 	});
