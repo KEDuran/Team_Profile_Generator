@@ -7,3 +7,9 @@
 .color3 {
 	background: rgb(250, 237, 203);
 }
+
+@media (max-width: 768px) {
+	.team-area {
+		flex-direction: column;
+	}
+}
