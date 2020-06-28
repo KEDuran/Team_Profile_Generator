@@ -87,6 +87,18 @@ const engineerQuestions = [
 		},
 	},
 	// asks for engineer's email
+	{
+		type: "input",
+		name: "email",
+		message: "What is the team member's email?",
+		validate: function (value) {
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+				return true;
+			} else {
+				return "Not a valid email. Please enter valid email.";
+			}
+		},
+	},
 	// asks for engineer's Github username
 ];
 
