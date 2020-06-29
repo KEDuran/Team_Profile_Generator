@@ -72,7 +72,7 @@ When checking to see if all applicable unit tests pass throughout the developmen
 
 To compliment the demo video provided in the [Links for Submission Items](#links-for-submission-items) section, I included the screenshots below to demonstrate that (a) all applicable unit test passed and (b) an team.html file was generated based on user input to prompted questions.
 
-### Pass all Unit Tests
+### All Unit Test Pass
 
 Screenshot that demonstrates all unit tests pass.
 
