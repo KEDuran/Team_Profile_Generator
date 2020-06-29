@@ -20,8 +20,8 @@ Repo for homework asignment 10
 
 ### Testing Commands
 
-### Final Output
+## Final Output
 
-#### Pass all Unit Tests
+### Pass all Unit Tests
 
-#### Generate Team.html file
+### Generate Team.html file
