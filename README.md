@@ -74,4 +74,12 @@ To compliment the demo video provided in the [Links for Submission Items](#links
 
 ### Pass all Unit Tests
 
+Screenshot that demonstrates all unit tests pass.
+
+![Unit Test Pass](./images/unitTestsPass.png)
+
 ### Generate Team.html file
+
+Screenshot that shows the team.html output generated during the demo recording.
+
+![Team.html Output](./images/teamHTMLoutput.png)
