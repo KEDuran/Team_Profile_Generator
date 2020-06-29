@@ -26,9 +26,27 @@ Here are the links to the MVP itemsthat I developed for this assignment. I will 
 
 ## Assignment Scope
 
+This assignment listed various requirement items in order to reach acceptable MVP standards. The two sections listed below list the main output and minimum requirements associated with this project.
+
 ### User Story
 
+```
+As a manager
+I want to generate a webpage that displays my team's basic info
+so that I have quick access to emails and GitHub profiles
+```
+
 ### Minimum Requirements
+
+The items listed below are the minimum requirements that must be met before submission for this assignment.
+
+- Functional application.
+
+- GitHub repository with a unique name and a README describing the project.
+
+- User can use the CLI to generate an HTML page that displays information about their team.
+
+- All tests must pass.
 
 ## Installation and Testing
 
