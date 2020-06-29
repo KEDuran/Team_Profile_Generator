@@ -1,8 +1,8 @@
 # Team Profile Generator
 
 ![GitHub Language Count](https://img.shields.io/github/languages/count/KEDuran/Team_Profile_Generator?label=Languages%20Used&logo=GitHub)
-![NPM Inquirer Version](https://img.shields.io/npm/v/inquirer?color=green&label=NPM%20Inquirer&logo=NPM)
 ![GitHub Followers](https://img.shields.io/github/followers/KEDuran?color=orange&label=Followers&logo=GitHub)
+![NPM Inquirer Version](https://img.shields.io/npm/v/inquirer?color=green&label=NPM%20Inquirer&logo=NPM)
 
 ## Description
 
