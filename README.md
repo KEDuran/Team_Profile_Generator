@@ -10,7 +10,14 @@ The goal of this assignment was to develop a team profile generator commandline 
 
 ## Table of Contents
 
-## Links for Submission
+Please use the links provided in the below table of contents to navigate throughout this project's ReadMe.
+
+- [Links for Submission Items](#links-for-submission-items)
+- [Assignment Scope](#assignment-scope)
+- [Installation and Testing](#installation-and-testing)
+- [Final Output](#final-output)
+
+## Links for Submission Items
 
 ## Assignment Scope
 
