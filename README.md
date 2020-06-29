@@ -23,6 +23,9 @@ Here are the links to the MVP items I developed for this assignment. I will also
 
 - Link to GitHub Repo - [https://github.com/KEDuran/Team_Profile_Generator](https://github.com/KEDuran/Team_Profile_Generator)
 - Link to Demo Video for Team Profile Generator CLI application - [https://drive.google.com/file/d/1p43dYzPLJ-n4I-fFK8yLeB6pnXaDhww-/view?usp=sharing](https://drive.google.com/file/d/1p43dYzPLJ-n4I-fFK8yLeB6pnXaDhww-/view?usp=sharing)
+  - **Extra Credit** - This video demonstrates that I incorporated validation into the prompt questions to ensure correct data format was entered.
+- **Extra Credit** Link to Portfolio - [https://keduran.github.io/Portfolio/](https://keduran.github.io/Portfolio/)
+  - I included a link to my portfolio as part of this submission to show that I included this project in my portfolio.
 
 ## Assignment Scope
 
