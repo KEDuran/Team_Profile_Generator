@@ -66,6 +66,8 @@ In order to successfully develop and test for this assignment, the following ite
 
 ### Testing
 
+When checking to see if all applicable unit tests pass throughout the development of this application, make sure to run the `npm run test` command in your terminal each time you would like to test the application.
+
 ## Final Output
 
 ### Pass all Unit Tests
