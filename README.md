@@ -50,9 +50,21 @@ The items listed below are the minimum requirements that must be met before subm
 
 ## Installation and Testing
 
-### Installation Commands
+Please reference the subsections below for installation and testing instructions required to successfully run this CLI application.
 
-### Testing Commands
+### Installation
+
+In order to successfully develop and test for this assignment, the following items must be installed and/or accessible from you working environment (i.e. laptop, computer, etc.).
+
+#### Make Sure to Install
+
+- **Node.js** - Make sure this is installed in your machine. If Node.js is not installed on your machine, [click here](https://nodejs.org/en/) to download Node.js.
+- **NPM Inquirer Package** - The [NPM inquirer package](https://www.npmjs.com/package/inquirer) is needed to prompt questions in the commandline.
+  - This package is already listed as a dependency in the `package.json` file, so you will only need to run the `npm install` command in your terminal to access this package.
+- **Jest** - The [jest](https://jestjs.io/) is the JavaScript testing framework that is used for unit testing in this project.
+  - This dependency is already included in the `package.json` file, so you will only need to run the `npm install` command in your terminal to enable testing capabilities.
+
+### Testing
 
 ## Final Output
 
