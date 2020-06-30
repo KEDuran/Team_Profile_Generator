@@ -85,4 +85,4 @@ Screenshot that demonstrates all unit tests pass.
 
 Screenshot that shows the team.html output file that was generated during the demo recording.
 
-![Team.html Output](./images/teamHTMLoutput.png)
+![Team.html Output](./images/output.png)
