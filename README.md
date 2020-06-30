@@ -22,7 +22,7 @@ Please use the links in the table of contents provided below to navigate through
 Here are the links to the MVP items I developed for this assignment. I will also be submitting these same items/links on the Boot Camp Spot portal.
 
 - Link to GitHub Repo - [https://github.com/KEDuran/Team_Profile_Generator](https://github.com/KEDuran/Team_Profile_Generator)
-- Link to Demo Video for Team Profile Generator CLI application - [https://drive.google.com/file/d/1p43dYzPLJ-n4I-fFK8yLeB6pnXaDhww-/view?usp=sharing](https://drive.google.com/file/d/1p43dYzPLJ-n4I-fFK8yLeB6pnXaDhww-/view?usp=sharing)
+- Link to Demo Video for Team Profile Generator CLI application - [https://drive.google.com/file/d/17opExIqAOQB8oJZKzGxhNDgm7Ou9GjmA/view?usp=sharing](https://drive.google.com/file/d/17opExIqAOQB8oJZKzGxhNDgm7Ou9GjmA/view?usp=sharing)
   - For _extra credit_, this video demonstrates that I incorporated validation into each prompt question to ensure correct data format was entered.
 - Link to Portfolio - [https://keduran.github.io/Portfolio/](https://keduran.github.io/Portfolio/)
   - For _extra credit_, I included a link to my portfolio as part of this submission to show that I added this project into my portfolio.
