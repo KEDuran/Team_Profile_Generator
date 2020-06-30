@@ -46,3 +46,9 @@ test('getRole() should return "Employee"', () => {
 	const e = new Employee("Alice", 1, "test@test.com");
 	expect(e.getRole()).toBe(testValue);
 });
+// test 9 (added practice test)
+test("getName() is null when no name is assigned", () => {
+	const testValue = undefined;
+	const e = new Employee();
+	expect(e.getName()).toBe(testValue);
+});
